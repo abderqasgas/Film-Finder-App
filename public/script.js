@@ -11,6 +11,7 @@ const getGenres = async () => {
         const response = await fetch(urlToFetch);
         if(response.ok){
             const jsonResponse = response.json();
+            console.log(jsonResponse)
         }
     } 
     catch (error) {
