@@ -38,6 +38,7 @@ const getMovies = async () => {
         // console.log(jsonResponse);
         const movies = jsonResponse.results;
         // console.log(movies);
+        return movies;
     }
   } 
   catch (error) {
@@ -72,6 +73,7 @@ const showRandomMovie = async () => {
   };
 
   const movies = await getMovies();
+//   console.log(movies);
   const randomMovie = getRandomMovie(movies);
   const info = await getMovieInfo(randomMovie);
   displayMovie(info);
